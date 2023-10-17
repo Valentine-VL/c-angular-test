@@ -11,7 +11,6 @@ import { Item } from '../models/Item'
 export class ItemListComponent implements OnInit {
 
   items: Item[] = [];
-  factorial: number = 0
   inputText: string = "";
 
   constructor(
