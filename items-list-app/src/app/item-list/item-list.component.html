@@ -1,0 +1,44 @@
+<header class="bg-primary text-white p-3">Items</header>
+
+<!-- Title -->
+<h1 class="mt-4">{{ title }}</h1>
+<div>
+        <button class="btn btn-info" (click)="calculateFactorials()">
+          Calculate Factorials
+        </button>
+</div>
+<!-- Form to Add New Item -->
+<form (submit)="addItem()" class="mb-3">
+  <div class="input-group">
+    <input
+      type="text"
+      name="inputText"
+      placeholder="Enter Item name..."
+      class="form-control"
+      [(ngModel)]="inputText"
+    />
+    <div class="input-group-append">
+      <button class="btn btn-primary" type="submit">Add Item</button>
+    </div>
+  </div>
+</form>
+<div class="container">
+  <div *ngFor="let item of items" class="mb-3">
+    <div class="row align-items-center">
+      <div class="col">
+        Item ID: {{ item.id }}
+      </div>
+      <div class="col">
+        Item Name: {{ item.name }}
+      </div>
+<!--      <div class="col">-->
+<!--        <button class="btn btn-info" (click)="calculateFactorial(item.id)">-->
+<!--          Calculate Factorial-->
+<!--        </button>-->
+<!--      </div>-->
+      <div id="factorial-for-{{ item.id }}" class="col">
+        Factorial: Not calculated
+      </div>
+    </div>
+  </div>
+</div>
