@@ -17,10 +17,11 @@ Before getting started, ensure that you have the following software and tools in
 Follow these steps to set up and run the web application on your local machine:
 
 ### Clone the Repository
+Create a fodler where you want to store the project. After that run:
 
 ```bash
 git clone https://github.com/Valentine-VL/c-angular-test.git
-cd angular-dotnet-app
+cd c-angular-test
 ```
 #### Navigate to backend, build and run server:
 ```bash
